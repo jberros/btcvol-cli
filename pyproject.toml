@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "btcvol-cli"
+version = "1.0.0"
+description = "CLI tool for submitting Bitcoin volatility prediction models to CrunchDAO competitions"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+    {name = "Jeremy Berros", email = "jberrospellenc@gmail.com"}
+]
+keywords = ["bitcoin", "volatility", "prediction", "competition", "cli", "crunchdao"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+btcvol-submit = "btcvol_submit:main"
+
+[project.urls]
+Homepage = "https://github.com/jberros/btcvol-cli"
+Documentation = "https://github.com/jberros/btcvol-cli#readme"
+Repository = "https://github.com/jberros/btcvol-cli"
+Issues = "https://github.com/jberros/btcvol-cli/issues"
+Package = "https://pypi.org/project/btcvol/"
+Competition = "https://www.crunchdao.com/"
