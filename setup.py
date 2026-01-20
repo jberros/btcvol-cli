@@ -9,7 +9,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="btcvol-cli",
-    version="1.0.0",
+    version="1.1.0",
     author="Jeremy Berros",
     author_email="jberrospellenc@gmail.com",
     description="CLI tool for submitting Bitcoin volatility prediction models to CrunchDAO competitions",
@@ -20,6 +20,9 @@ setup(
     install_requires=[
         "pyyaml>=6.0",
     ],
+    extras_require={
+        "notebook": ["crunch-convert>=0.1.0"],
+    },
     entry_points={
         "console_scripts": [
             "btcvol-submit=btcvol_submit:main",
